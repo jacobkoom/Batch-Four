@@ -1,0 +1,31 @@
+#CREATING A BIRTHDAY REMINDER APP
+#CREATED BY: Jacob Koom; eMail: jacobkoom@yahoo.com; Phone No. 08060899200
+
+dict = {}
+while True:
+    print("-----------------BIRTHDAY APP-----------------")
+    print("Created by: JACOB KOOM; eMail: jacobkoom@yahoo.com")
+    print("")
+    print("Choose from options 1, 2 or 3 below to continue")
+    print("")
+    print("1.Show Birthday")
+    print("2.Add to Birthday List")
+    print("3.Exit")
+    print("")
+    choice = int(input("Enter the Choice"))
+    if choice == 1:
+        if len(dict.keys()) == 0:
+            print("Nothing to show")
+        else:
+            name=input("Enter name to look for birthday")
+            birthday=dict.get(name, "No data found")
+            print(name + ", born on " + birthday)
+    elif choice == 2:
+        name=input("Enter Friend's Name")
+        date=input("Enter Birthdate")
+        dict[name]=date
+        print("Birthday Added")
+    elif choice == 3:
+        break
+    else:
+        print("Choose a valid option")
